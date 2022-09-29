@@ -1,7 +1,7 @@
 
 function App() {
   return (
-    <div></div>
+    <div>Bài tập 1 hi</div>
   );
 }
 
