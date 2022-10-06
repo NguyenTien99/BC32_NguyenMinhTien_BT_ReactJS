@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header {
+    text-align: center;
+    background-color: #000000b5;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Model */
+#model{
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0;
+    background: transparent;
+}
+#model .img__model{
+    max-width: 200px;
+    margin: auto;
+}
+#model .img__model img{
+    width: 100%;
+}
+.img__model{
+    text-align: center;
+}
+
+/* Detail */
+.mode__tryGlass{
+    position: relative;
+    background-image: url("../../public/glassesImage/model.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img__try{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 200px;
+
+}
+.info__glass{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Glasses */
+#glasses {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 30px
+    ;
+}
+
+#glasses img{
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+}
