@@ -6,12 +6,12 @@ const GlassesDetail = ({ glasses }) => {
     }
   return (
     <div className='col-6'>
-        <div className="mode__tryGlass">
-            <img src="./glassesImage/model.jpg" alt="model" />
+        <div id="model__tryGlass">
+            <img id="modelImg__tryGlass" src="./glassesImage/model.jpg" alt="model" />
             
             <img className="img__try" src={glasses.url} alt={glasses.name} />
             <div className="info__glass">
-                <h4>{glasses.name}</h4>
+                <h5>{glasses.name}</h5>
                 <p>{glasses.desc}</p>
             </div>
         </div>

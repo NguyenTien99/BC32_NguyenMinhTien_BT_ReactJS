@@ -3,11 +3,25 @@
     padding: 0;
     margin: 0;
 }
+
+#TryToGlasses{
+    background-image: url("../../public/glassesImage/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
 header {
     text-align: center;
     background-color: #000000b5;
     color: white;
-    padding: 20px 0;
+    padding: 25px 0;
+    margin-bottom: 50px;
+}
+
+#tryToglasses{
+    max-width: 900px;
+    margin: auto;
 }
 
 /* Model */
@@ -17,11 +31,12 @@ header {
     padding: 30px 0;
     background: transparent;
 }
-#model .img__model{
-    max-width: 200px;
+.img__model{
+    max-width: 250px;
     margin: auto;
+    border: 1px solid black;
 }
-#model .img__model img{
+.img__model img{
     width: 100%;
 }
 .img__model{
@@ -29,37 +44,51 @@ header {
 }
 
 /* Detail */
-.mode__tryGlass{
+#model__tryGlass{
     position: relative;
-    background-image: url("../../public/glassesImage/model.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    max-width: 250px;
+    margin: 0 auto;
+    border: 1px solid black;
 }
-.img__try{
+#modelImg__tryGlass{
+    width: 100%;
+}
+#model__tryGlass .img__try{
     position: absolute;
-    left: 0;
-    top:0;
-    width: 200px;
-
+    left: 25%;
+    top:25%;
+    width: 125px;
+    opacity: 0.8;
 }
 .info__glass{
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    padding: 10px;
+    background-color: #ffa50085;
 }
-
+.info__glass h5{
+    margin-bottom: 4px;
+    color: blue;
+}
+.info__glass p{
+    margin: 0;
+    font-size: 12px;
+    color: white;
+}
 /* Glasses */
 #glasses {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
-    background-color: white;
-    padding: 30px
-    ;
+    background-color: #0000007a;
+    padding: 40px 0 ;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 #glasses img{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 5px;
 }
