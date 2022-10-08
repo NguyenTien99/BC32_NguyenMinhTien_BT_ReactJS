@@ -1,7 +1,10 @@
+import ShoesShop from "./BT_ShoesShop/ShoesShop";
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <ShoesShop />
+    </div>
   );
 }
 
