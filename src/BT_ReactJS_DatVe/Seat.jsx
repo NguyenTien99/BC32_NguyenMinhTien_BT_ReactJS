@@ -1,16 +1,36 @@
 import React from "react";
 import cn from "classnames";
+import { useSelector, useDispatch } from "react-redux";
+import { removeSeat, selectSeat } from "../actions/datVeActions";
 
-const Seat = ({ seats, onSelectSeat,onToggleSeat }) => {
+const Seat = () => {
+  // lấy state từ store redux
+  const { seats, selectedSeat } = useSelector((state) => {
+    return state.datVeRedux;
+  });
 
+  const dispatch = useDispatch();
+
+  const handleSelectSeat = (ghe) => {
+    const index = selectedSeat.findIndex((item) => item.soGhe === ghe.soGhe);
+    if (index === -1) {
+      // dispatch({ type: "select_seat", seat: ghe });
+      dispatch(selectSeat(ghe));
+    } else {
+      // dispatch({ type: "remove_seat", seat: ghe });
+      dispatch(removeSeat(ghe));
+    }
+  };
+
+  // Kiểm tra ghế đã đặt hay chưa
   const gheDangDat = (soGhe) => {
-    const index = onToggleSeat.findIndex(item => item.soGhe === soGhe)
-    if(index !== -1){
-      return true
+    const index = selectedSeat.findIndex((item) => item.soGhe === soGhe);
+    if (index !== -1) {
+      return true;
     }
     return false;
-  }
-  
+  };
+
   return (
     <>
       <div className="screen"></div>
@@ -22,7 +42,7 @@ const Seat = ({ seats, onSelectSeat,onToggleSeat }) => {
                 <td className="rowNumber">{seat.hang}</td>
                 {seat.danhSachGhe.map((ghe) => {
                   if (seat.hang) {
-                    let isgheDangChon = gheDangDat(ghe.soGhe)
+                    let isgheDangChon = gheDangDat(ghe.soGhe);
                     return (
                       <td key={ghe.soGhe}>
                         <div
@@ -31,7 +51,7 @@ const Seat = ({ seats, onSelectSeat,onToggleSeat }) => {
                             { gheDuocChon: ghe.daDat },
                             { gheDangChon: isgheDangChon }
                           )}
-                          onClick={() => onSelectSeat(ghe)}
+                          onClick={() => handleSelectSeat(ghe)}
                         >
                           {ghe.soGhe}
                         </div>
